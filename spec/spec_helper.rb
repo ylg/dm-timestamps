@@ -12,6 +12,7 @@ require 'dm-validations'
 # Support running specs with 'rake spec' and 'spec'
 $LOAD_PATH.unshift('lib') unless $LOAD_PATH.include?('lib')
 
+require 'dm-migrations'
 require 'dm-timestamps'
 
 def load_driver(name, default_uri)
