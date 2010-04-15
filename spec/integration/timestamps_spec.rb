@@ -25,13 +25,13 @@ if HAS_SQLITE3 || HAS_MYSQL || HAS_POSTGRES
       end
       
       it "should set the created_at/on fields on create" do
-        green_smoothie = GreenSmoothie.create(:name => 'Banana')
+        green_smoothie = GreenSmoothie.create(:name => 'Kiwifruit')
         green_smoothie.created_at.should be_a_kind_of(DateTime)
         green_smoothie.created_on.should be_a_kind_of(Date)
       end
 
       it "should set the created_at/on fields on first_or_create" do
-        green_smoothie = GreenSmoothie.first_or_create(:name => 'Banana')
+        green_smoothie = GreenSmoothie.first_or_create(:name => 'Honeydew')
         green_smoothie.created_at.should be_a_kind_of(DateTime)
         green_smoothie.created_on.should be_a_kind_of(Date)
       end
